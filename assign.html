@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #mn{
+      height: 400px;
+      width: 400px;
+      background-color: rgb(146, 188, 174);
+      border: 2px solid black;
+    }
+    #ig{
+      margin-top: 10px;
+      margin-left: 10px;
+      height: 70px;
+      width: 70px;
+      border: 2px solid black;
+    }
+    h1{
+      margin-left: 100px;
+    }
+    #zero{
+      margin-left:190px;
+    font-size: 50px;
+    }
+    #b1{
+      margin-left:20px ;
+      height: 40px;
+      width: 70px;
+    }
+    #b2{
+      margin-bottom: 100px;
+      margin-left: 300px;
+      height: 40px;
+      width: 70px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="mn">
+    <img src="imgg.png" alt="logo" id="ig">
+    <h1>Counter App</h1>
+    <p id="zero">0</p>
+    <button onclick="add()" id="b1">add</button>
+    <button onclick="sub()" id="b2">sub</button>
+  </div>
+
+  <script>
+    let max=10;
+    let min=0;
+    let c=0;
+    function add(){
+      if(c<max){
+        c++;
+      document.getElementById("zero").innerHTML=c;
+      }
+      else{
+        alert("max limit reached");
+      }
+    }
+
+    function sub(){
+      if(c>min){
+        c--;
+       document.getElementById("zero").innerHTML=c;
+      }
+      else{
+        alert("min limmit reached");
+      }
+     
+    }
+  </script>
+  
+</body>
+</html>
