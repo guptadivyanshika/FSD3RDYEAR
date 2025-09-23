@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    .container {
+      background: #e7cfcf;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(16, 0, 0, 0.1);
+      width: 500px;
+    }
+    h1 {
+      text-align: center;
+      color: #250505;
+    }
+  </style>
+<body>
+    <h1 class="container">Student Detail</h1>
+    <p id="adi"></p>
+    <script>
+      class Student {
+    constructor(name, cls, branch, rollno) {
+        this.name = name;
+        this.cls = cls;
+        this.branch = branch;
+        this.rollno = rollno;
+    }
+}
+
+const s1 = new Student("parv", "Btech", "DS", 12);
+const s2 = new Student("monu", "Btech", "IT", 12);
+const s3 = new Student("isha", "Btech", "IT", 12);
+const s4 = new Student("harsh", "Btech", "ML", 12);
+const s5 = new Student("ria", "Btech", "CS", 12);
+
+const arr = [s1, s2, s3, s4, s5];
+
+const grouped = {};
+arr.forEach(student => {
+    const key = student.branch.toUpperCase(); 
+    if (!grouped[key]) {
+        grouped[key] = [];
+    }
+    grouped[key].push(student);
+});
+
+for (const branch in grouped) {
+    document.writeln(`<b>${branch}:</b><br>`);
+    grouped[branch].forEach(s => {
+        document.writeln(`Name: ${s.name}, Class: ${s.cls}, Roll No: ${s.rollno}<br>`);
+    });
+    document.writeln("<br>");
+}
+
+</script>
+</body>
+</html>
+
