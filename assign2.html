@@ -47,14 +47,12 @@
   </style>
 </head>
 <body>
-  <!-- Hide Image Card (Left) -->
   <div class="card">
     <h2>Hide Image Card</h2>
     <img id="hideImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/June_odd-eyed-cat.jpg/320px-June_odd-eyed-cat.jpg" class="top-img">
     <button id="hideBtn" onclick="toggleImage()">Hide Image</button>
   </div>
 
-  <!-- Counter App Card (Center) -->
   <div class="card">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpWJZborGVpXeImvij0ulVWu0jNNIz0lrUng&s" class="logo">
     <h2>Counter App</h2>
@@ -63,7 +61,6 @@
     <button onclick="setCounter(-1)">-</button>
   </div>
 
-  <!-- Image Switcher Card (Right) -->
   <div class="card">
     <h2>Image Switcher Card</h2>
     <img id="switchImg" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" class="top-img">
@@ -71,7 +68,6 @@
   </div>
 
   <script>
-    // Counter App Logic
     let c = 0;
     function setCounter(x) {
       let prev = c;
@@ -81,7 +77,6 @@
       if (c === 0 && prev !== 0) alert("Minimum limit!");
     }
 
-    // Hide/Show Image Card Logic
     function toggleImage() {
       let img = document.getElementById('hideImg');
       let btn = document.getElementById('hideBtn');
@@ -93,8 +88,6 @@
         btn.innerText = "Show Image";
       }
     }
-
-    // Image Switcher Card Logic
     let toggle = true;
     function switchImage() {
       let img = document.getElementById('switchImg');
