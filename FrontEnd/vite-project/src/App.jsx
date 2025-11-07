@@ -1,15 +1,13 @@
 import React from 'react'
-import Card from './component/card'
+import Book from './component/Book'
 import './App.css'
 function App() {
   return (
-    <div id='card'>
-     {/* <Card name="mohan" edu='10'/>
-     <br/>
-     <Card name="sohan" edu='10'/>
-    <br/>
-    <Card name="rupak" edu='10'/> */}
-    <Count1/>
+    <div id='b'>
+      <Book Title='Maths' Price='2540'/>
+      <Book Title='eng' Price='1240'/>
+      <Book Title='sst' Price='2740'/>
+      <Book Title='Computer' Price='2400'/>
     </div>
   )
 }

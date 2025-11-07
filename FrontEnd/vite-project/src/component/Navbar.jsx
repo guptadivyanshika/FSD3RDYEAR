@@ -11,8 +11,7 @@ function Navbar() {
           height={50}
         />
         <h2>ABESEC</h2>
-      </div>
-      
+      </div>    
     </nav>
   );
 }
